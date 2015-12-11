@@ -1,0 +1,47 @@
+print("Fahrschulübungsbogen")
+f =1
+F =0
+B =0
+
+while f <=20:
+    f+=1
+print("Vor jeder Frage werden die Anzahl der beantworten Fragen und die Anzahl der Falsch beantworteten Fragen angezeigt")
+print("beantwortete Fragen=",B,"Falsch beantwortet=",F)
+if f == 1:
+    print("Wie groß muss mindestens dein Reifenprofil sein?")
+    a = int(input("1.=1,0mm; 2.=1,3mm; 3.=1,6mm"))
+    if a ==3:
+        print("Richtig, 1,6mm")
+        B+=1
+    else:
+        print("Falsch. Richtig wäre 1,6mm gewesen")
+        F+=2
+        B+=1
+        print("Fragen=",B,"Falsch=",F)
+if f == 2:
+    a = int(input("Welche Richtgeschwindigkeit gilt für Pkw und Motorräder auf Autobahnen?"))
+    if a ==130:
+       print("Richtig")
+       B+=1
+    else:
+         b = int(input("Nochmal versuchen? 1=Ja; 2=Nein"))
+         if b ==1:
+             a = int(input("Welche Richtgeschwindigkeit gilt für Pkw und Motorräder auf Autobahnen?"))
+             if a ==130:
+                print("Richtig")
+                B+=1
+         if b ==2:
+             F+=2
+             B+=1
+             print("Fragen=",B,"Falsch=",F)
+if f == 3:
+    print("Wie verändert sich der Verbrauch, wenn man mit einer Geschwindigkeit von 160 Km/h statt einer Richtgeschwindigkeit von 130 Km/h fährt?")
+    a = int(input("1.=bis zu 10%; 2.=bis zu 35%; 3.=bis zu 5%"))
+    if a ==2:
+         print("Richtig")
+         B+=1
+    else:
+        print("Falsch")
+        F+=1
+        B+=1
+        print("Fragen=",B,"Falsch=",F)
