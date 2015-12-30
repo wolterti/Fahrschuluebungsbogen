@@ -1,0 +1,761 @@
+print("Fahrschulübungsbogen")
+f =1 #Die Verschiedenen Fragen
+F =0 #Falsch beantwortete Fragen
+B =0 #Anzahl der Fragen
+print("Man muss zwischen A,B,C auswählen. Außer es ist eine Frage, bei der mehrere Möglichkeiten richtig sein könnten, dann muss man zwischen A bis G auswählen.")
+print("Wenn man etwas anderes als eine Antwortmöglichkeit eingibt, hat man noch eine weitere Möglichkeitkeit die Frage zu beantworten und dann wird die Frage als Falsch gezählt.")
+print("Nach jeder Frage werden die Anzahl der beantworten Fragen und die Anzahl der Falsch beantworteten Fragen angezeigt")
+print("beantwortete Fragen=",B,"Falsch beantwortet=",F)
+while f <=20:
+     if f == 1: #Die erste Frage
+          print("*")
+          print("Wie groß muss mindestens dein Reifenprofil sein?")
+          print("A=1,0mm; B=1,3mm; C=1,6mm") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="C": #richtig beantwortet
+               print("Richtig, 1,6mm")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     elif a =="A" or a =="B": #falsch beantwortet
+               print("Falsch. Richtig wäre 1,6mm gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     else: #falsche Eingabe
+               a = input("Nur A,B oder C sind zulässige Antworten. Deine Antwort?")
+               if a =="C": #richtig beantwortet                                                     
+                    print("Richtig, 1,6mm")                                                         
+                    B+=1                                                                            
+                    print("Fragen=",B,"Falsch=",F)                                                  
+                    f+=1                                                                            
+               elif a =="A" or a =="B": #falsch beantwortet                                         
+                    print("Falsch. Richtig wäre 1,6mm gewesen")                                     
+                    F+=1                                                                            
+                    B+=1                                                                            
+                    print("Fragen=",B,"Falsch=",F)                                                  
+                    f+=1                                                                            
+               else:#falsche Eingabe                                                         
+                    print("Nur A,B oder C wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre C (1,6mm)gewesen")
+                    F+=1
+                    B+=1
+                    print("Fragen=",B,"Falsch=",F)
+                    f+=1                                                                            
+     if f == 2: #Die zweite Frage
+          print("*")
+          print("Welche Richtgeschwindigkeit gilt für Pkw und Motorräder auf Autobahnen?")
+          print("A=100km/h; B=130km/h; C=150km/h")#Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="B":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="C":#falsch beantwortet
+          print("Falsch, Richtig wäre 130 km/h gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B oder C sind zulässige Antworten. Deine Antwort?")
+          if a =="B":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="C":#falsch beantwortet
+               print("Falsch, Richtig wäre 130 km/h gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B oder C wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre B gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1                       
+     if f == 3: #Die dritte Frage
+          print("*")
+          print("Wie verändert sich der Verbrauch, wenn man mit einer Geschwindigkeit von 160 Km/h statt einer Richtgeschwindigkeit von 130 Km/h fährt?")
+          print("A=bis zu 10%; B=bis zu 35%; C=bis zu 5%")#Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="B":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="C":#falsch beantwortet
+          print("Falsch. B wäre die richtige Antwort gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B oder C sind zulässige Antworten. Deine Antwort?")
+          if a =="B":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="C":#falsch beantwortet
+               print("Falsch. Richtig wäre B gewesen.")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B oder C wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre B gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1                   
+     if f == 4: #Die vierte Frage
+          print("*")
+          print("Die Ampel zeigt 'Grün'. Sie wollen rechts abbiegen. Wie verhalten Sie sich gegenüber Personen, welche die Straße überqueren, in die Sie einbiegen möchten?")
+          print("A=Die Personen durch Hupen warnen")                   #Antwortmöglichkeiten
+          print("B=Zügig vor den Personen abbiegen")                   #Antwortmöglichkeiten
+          print("C=Den Personen das Überqueren der Straße ermöglichen")#Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="C":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B":#falsch beantwortet
+          print("Falsch. C wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B oder C sind zulässige Antworten. Deine Antwort?")
+          if a =="C":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B":#falsch beantwortet
+               print("Falsch.")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B oder C wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre C gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1                   
+     if f == 5: #Die fünfte Frage
+          print("*")
+          print("Im Herbst kommen ihnen am Tage eine Reihe von Pkw mit eingeschalteten Abblendlicht entgegen. Womit müssen Sie besonders rechnen?")
+          print("1.Mit starken Regenschauern")
+          print("2.Mit verschmutzter Fahrbahn")
+          print("3.Mit plötzlich auftretenden Nebelbänken")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3")#Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="E":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="F" or a =="G":#falsch beantwortet
+          print("Falsch. E wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="E":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="F" or a =="G":#falsch beantwortet
+               print("Falsch. E wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre E gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1     
+     if f == 6: #Die sechste Frage
+          print("*")
+          print("Es nähert sich ein Fahrzeug mit blauem Blinklicht und Einsatzhorn. Wie verhalten Sie sich?")
+          print("1.Immer scharf bremsen und sofort stehen bleiben")
+          print("2.Wenn nötig, vorsichtig auf den Gehweg ausweichen")
+          print("3.Dem Fahrzeug Platz machen")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3")#Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="F":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="G": #falsch beantwortet
+          print("Falsch. F wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="F":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="G":#falsch beantwortet
+               print("Falsch. F wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre F gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1      
+     if f == 7: #Die siebte Frage
+          print("*")
+          print("Was ist über die Geschwindigkeit beim Überholvorgang vorgeschrieben?")
+          print("1.Wer überholt wird, darf seine Geschwindigkeit nicht erhöhen")
+          print("2.Die zulässige Höchstgeschwindigkeit darf nicht überschritten werden")
+          print("3.Die Geschwindigkeit des Überholenden muss wesentlich höher sein")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="G":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F": #falsch beantwortet
+          print("Falsch. G wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="G":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F":#falsch beantwortet
+               print("Falsch. G wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre G gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 8: #Die achte Frage
+          print("*")
+          print("Wo ist das Halten verboten?")
+          print("1.Vor Ein- und Ausfahrten von Grundstücken")
+          print("2.Auf markierten Fahrstreifen mit Richtungspfeilen")
+          print("3.Auf Einfädelungs- und Ausfädelungsstreifen")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="G":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F": #falsch beantwortet
+          print("Falsch. G wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="G":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F":#falsch beantwortet
+               print("Falsch. G wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre G gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 9: #Die neunte Frage
+          print("*")
+          print("Eine Person im Rollstuhl schafft es nach dem Überqueren der Straße nicht, mit dem Rollstuhl den Bordstein zu überwinden, um den Gehweg zu erreichen. Wie verhalten Sie sich?")
+          print("1.Ich steige aus und helfe der Person im Rollstuhl")
+          print("2.Ich hupe und fahre um die Person herum")
+          print("3.Ich halte und schalte die Warnblinkanlage ein")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="E":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="F" or a =="G": #falsch beantwortet
+          print("Falsch. E wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="E":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="F" or a =="G":#falsch beantwortet
+               print("Falsch. E wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre E gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 10: #Die zehnte Frage
+          print("*")
+          print("Wie müssen Sie einen Überholvorgang beenden?")
+          print("1.Ohne den Überholenden zu behindern, so bald wie möglich wieder nach rechts einordnen")
+          print("2.Dicht vor dem Überholenden wieder auf die rechte Fahrbahnseite wechseln")
+          print("3.Das Wiedereinordnen rechtzeitig und deutlich anzeigen")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="E":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="F" or a =="G": #falsch beantwortet
+          print("Falsch. E wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="E":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="F" or a =="G":#falsch beantwortet
+               print("Falsch. E wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre E gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 11: #Die elfte Frage
+          print("*")
+          print("Welche Fahrweise führt zu hohem Kraftstoffverbrauch?")
+          print("1.Rasantes Anfahren und unnötiges Beschleunigen")
+          print("2.Volles Ausfahren aller Gänge")
+          print("3.Fahren mit hoher Geschwindigkeit")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="G":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F": #falsch beantwortet
+          print("Falsch. G wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="G":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F":#falsch beantwortet
+               print("Falsch. G wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre G gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 12: #Die zwölfte Frage
+          print("*")
+          print("Welche Vorteile bietet ein Antiblockiersystem (ABS)?")
+          print("1.Selbst bei starkem Bremsen bleibt die Lenkfähigkeit erhalten")
+          print("2.Beim Bremsen wird das Blockieren der Räder verhindert")
+          print("3.Kurven können wesentlich schneller durchfahren werden")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="D":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="E" or a =="F" or a =="G": #falsch beantwortet
+          print("Falsch. D wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="D":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="E" or a =="F" or a =="G":#falsch beantwortet
+               print("Falsch. D wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre D gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 13: #Die dreizehnte Frage
+          print("*")
+          print("Wodurch können Sie die Umweltbelastung verringern?")
+          print("1.Durch Meiden von Straßen mit häufigen Stau")
+          print("2.Durch Meiden von Verkehrsspitzen")
+          print("3.Durch Bilden von Fahrgemeinschaften")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="G":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F": #falsch beantwortet
+          print("Falsch. G wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="G":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F":#falsch beantwortet
+               print("Falsch. G wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre G gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 14: #Die vierzehnte Frage
+          print("*")
+          print("Was ändert sich durch Mitführen eines Wohnanhängers?")
+          print("1.Hastige Lenkbewegungen erhöhen die Schleudergefahr")
+          print("2.Der Überholweg wird wesentlich länger")
+          print("3.Der Bremsweg wird wesentlich kürzer")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="D":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="E" or a =="F" or a =="G": #falsch beantwortet
+          print("Falsch. D wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="D":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="E" or a =="F" or a =="G":#falsch beantwortet
+               print("Falsch. D wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre D gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 15: #Die fünfzehnte Frage
+          print("*")
+          print("Welches Fahrzeug muss warten, wenn eine Baustelle die halbe Fahrbahn blockiert?")
+          print("A=Das Fahrzeug, auf dessen Seite die Baustelle ist")#Antwortmöglichkeiten
+          print("B=Das Fahrzeug auf der freien Fahrbahnhälfte")      #Antwortmöglichkeiten
+          print("C=Immer das kleinere Fahrzeug")                     #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="A":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="B" or a =="C":#falsch beantwortet 
+          print("Falsch. A wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B und C sind zulässige Antworten. Deine Antwort?")
+          if a =="A": #richtig beantwortet                                                     
+               print("Richtig")                                                         
+               B+=1                                                                            
+               print("Fragen=",B,"Falsch=",F)                                                  
+               f+=1                                                                            
+          elif a =="B" or a =="C": #falsch beantwortet                                         
+               print("Falsch. Richtig wäre A gewesen")                                     
+               F+=1                                                                            
+               B+=1                                                                            
+               print("Fragen=",B,"Falsch=",F)
+               f+=1                                                                            
+          else:                                                                                
+               print("Nur A,B oder C wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre A gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1                                                           
+     if f == 16: #Die sechzehnte Frage
+          print("*")
+          print("In welchen Fällen müssen sie blinken?")
+          print("1.Vor dem Wiedereinordnen nach dem Überholen")
+          print("2.Beim Verlassen einer abknickenden Vorfahrtsstraße in gerader Richtung")
+          print("3.Vor dem Ausscheren zum Überholen oder zum Vorbeifahren")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="E":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="F" or a =="G": #falsch beantwortet
+          print("Falsch. E wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="E":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="F" or a =="G":#falsch beantwortet
+               print("Falsch. E wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre E gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 17: #Die siebzehn Frage
+          print("*")
+          print("Was kann durch eine 20%ige Überladung eintreten?")
+          print("1.Verschlechterung des Lenkverhaltens")
+          print("2.Schäden an tragenden Fahrzeugteilen")
+          print("3.Überbeanspruchung der Bremsen")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="G":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F": #falsch beantwortet
+          print("Falsch. G wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="G":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F":#falsch beantwortet
+               print("Falsch. G wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre G gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 18: #Die achzehnte Frage
+          print("*")
+          print("Warum darf man nicht unnötig langsam fahren?")
+          print("1.Weil die Gefahr von Auffahrunfällen erhöht wird")
+          print("2.Weil der Verkehrsfluss behindert wird")
+          print("3.Weil Nachfolgende zu gefährlichem Überholen verleitet werden")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="G":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F": #falsch beantwortet
+          print("Falsch. G wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="G":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F":#falsch beantwortet
+               print("Falsch. G wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre G gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 19: #Die neunzehnte Frage
+          print("*")
+          print("Womit ist zu rechnen, wenn man sich Kindern nähert?")
+          print("1.Mit unüberlegten Verhalten der Kinder")
+          print("2.Mit schnellem und richtigen Reagieren der Kinder")
+          print("3.Mit verkehrsgerechten Verhalten der Kinder")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="A":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     elif a =="B" or a =="C" or a =="D" or a =="E" or a =="F" or a =="G": #falsch beantwortet
+          print("Falsch. A wäre richtig gewesen")
+          F+=1
+          B+=1
+          print("Fragen=",B,"Falsch=",F)
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="A":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="B" or a =="C" or a =="D" or a =="E" or a =="F" or a =="G":#falsch beantwortet
+               print("Falsch. A wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre A gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+     if f == 20: #Die zwanzigste Frage
+          print("*")
+          print("Welche Folgen kann die Missachtung von Müdigkeitsanzeichen nach sich ziehen?")
+          print("1.Sekundenschlaf")
+          print("2.Fahrfehler")
+          print("3.Konzentrationsfehler")
+          print("A=1; B=2; C=3; D=1 und 2; E=1 und 3; F=2 und 3; G=1,2 und 3") #Antwortmöglichkeiten
+          a = input("Deine Antwort?")
+     if a =="G":#richtig beantwortet
+          print("Richtig")
+          B+=1
+          f+=1
+     elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F": #falsch beantwortet
+          print("Falsch. G wäre richtig gewesen")
+          F+=1
+          B+=1
+          f+=1
+     else:#falsche Eingabe
+          a = input("Nur A,B,C,D,E,F und G sind zulässige Antworten. Deine Antwort?")
+          if a =="G":#richtig beantwortet
+               print("Richtig")
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          elif a =="A" or a =="B" or a =="C" or a =="D" or a =="E" or a =="F":#falsch beantwortet
+               print("Falsch. G wäre richtig gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+          else:                                                                                
+               print("Nur A,B,C,D,E,F oder G wären Antwortmöglichkeiten gewesen, deswegen ist diese Antwort Falsch. Die richtige Antwort wäre G gewesen")
+               F+=1
+               B+=1
+               print("Fragen=",B,"Falsch=",F)
+               f+=1
+if f ==21:#Das Endergebnis
+     print("Das ist dein Ergebnis:")
+     print("Fragen=",B,"Falsch=",F)
+     if F ==0:
+          print("Perfekt! Null Fehler")
